@@ -3,7 +3,6 @@ import { Play, Pause, Volume2, VolumeX, Maximize, Home, Instagram, Mail } from '
 import FloatingIcons from "./components/FloatingIcons";
 import LoadingScreen from "./components/LoadingScreen";
 import ScrollAnimation from "./components/ScrollAnimations";
-import ParallaxElement from "./components/ParallaxElement";
 
 interface VideoPlayerProps {
   src: string;
@@ -295,8 +294,8 @@ function App() {
       
       {/* Hero Section */}
    <section id="home" className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0a0a0f] via-[#0f1419] to-[#1a1a2e] text-white">
-         {/* Sophisticated Small Grid Background */}
-        <ParallaxElement speed="slow" className="absolute inset-0">
+        {/* Sophisticated Small Grid Background */}
+        <div className="absolute inset-0">
           <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -312,23 +311,17 @@ function App() {
             </defs>
            <rect width="100%" height="100%" fill="url(#smallGrid)" filter="url(#gridGlow)" opacity="0.5" />
           </svg>
-        </ParallaxElement>
+        </div>
       <FloatingIcons />
         {/* Deep Blue Blur Orbs */}
-        <ParallaxElement speed="medium">
-          <div className="absolute top-1/4 left-[85%] w-80 h-80 bg-[#1e40af]/40 rounded-full blur-3xl"></div>
-        </ParallaxElement>
-        <ParallaxElement speed="fast">
-          <div className="absolute bottom-1/4 right-[85%] w-96 h-96 bg-[#1e3a8a]/30 rounded-full blur-3xl"></div>
-        </ParallaxElement>
-        <ParallaxElement speed="medium">
-          <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-[#3730a3]/25 rounded-full blur-3xl"></div>
-        </ParallaxElement>
+        <div className="absolute top-1/4 left-[85%] w-80 h-80 bg-[#1e40af]/40 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-[85%] w-96 h-96 bg-[#1e3a8a]/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-[#3730a3]/25 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-8 py-20">
           <div className="relative z-10">
             {/* Hero Content */}
-            <ScrollAnimation animation="fade-up" delay={200}>
+            <ScrollAnimation animation="fade-up" delay={50}>
               <div className="text-center mb-8 md:mb-15">
                 <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-glow-purple">
                   Aamir Naqvi
@@ -372,7 +365,7 @@ function App() {
             </ScrollAnimation>
             
             {/* Showreel */}
-            <ScrollAnimation animation="scale-in" delay={400}>
+            <ScrollAnimation animation="scale-in" delay={100}>
               <div className="max-w-6xl mx-auto">
                 <div className="relative z-10 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-12 shadow-2xl bg-gradient-to-br from-[#1e3a8a]/20 via-[#1e40af]/15 to-[#3730a3]/20">
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 md:mb-8 text-white px-10 text-glow-purple">Showreel</h2>
@@ -392,7 +385,7 @@ function App() {
       {/* 16:9 Portfolio Section */}
       <section id="videos" className="py-12 md:py-20 px-4 md:px-8 relative overflow-hidden bg-gradient-to-br from-[#0a0a0f] via-[#0f1419] to-[#1a1a2e]"> 
         {/* Small Grid Background */}
-        <ParallaxElement speed="slow" className="absolute inset-0">
+        <div className="absolute inset-0">
           <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="portfolioGrid" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -408,20 +401,16 @@ function App() {
             </defs>
             <rect width="100%" height="100%" fill="url(#portfolioGrid)" filter="url(#portfolioGlow)"/>
           </svg>
-        </ParallaxElement>
+        </div>
         
         {/* Deep Blue Blur Orbs */}
-        <ParallaxElement speed="medium">
-          <div className="absolute top-1/4 left-[85%] w-64 h-64 bg-[#1e40af]/30 rounded-full blur-3xl"></div>
-        </ParallaxElement>
-        <ParallaxElement speed="fast">
-          <div className="absolute bottom-1/4 right-[85%] w-64 h-64 bg-[#1e3a8a]/25 rounded-full blur-3xl"></div>
-        </ParallaxElement>
+        <div className="absolute top-1/4 left-[85%] w-64 h-64 bg-[#1e40af]/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-[85%] w-64 h-64 bg-[#1e3a8a]/25 rounded-full blur-3xl"></div>
         
         <div className="max-w-6xl mx-auto">
-          <ScrollAnimation animation="fade-up" delay={100}>
+          <ScrollAnimation animation="fade-up" delay={25}>
             <div className="relative z-10 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-12 shadow-2xl bg-gradient-to-br from-[#1e3a8a]/20 via-[#1e40af]/15 to-[#3730a3]/20">
-              <ScrollAnimation animation="fade-up" delay={200}>
+              <ScrollAnimation animation="fade-up" delay={50}>
                 <div className="text-center mb-8 md:mb-12">
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent px-4 text-glow-blue">
                     Cinematic Projects
@@ -431,10 +420,10 @@ function App() {
                   </p>
                 </div>
               </ScrollAnimation>
-              <ScrollAnimation animation="fade-up" delay={300}>
+              <ScrollAnimation animation="fade-up" delay={75}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
                   {landscapeVideos.map((video, index) => (
-                    <ScrollAnimation key={index} animation="scale-in" delay={100 * index}>
+                    <ScrollAnimation key={index} animation="scale-in" delay={25 * index}>
                       <VideoPlayer
                         src={video.src}
                         poster={video.poster}
@@ -453,7 +442,7 @@ function App() {
       {/* 9:16 Portfolio Section */}
       <section className="py-12 md:py-20 px-4 md:px-8 relative overflow-hidden bg-gradient-to-br from-[#0a0a0f] via-[#0f1419] to-[#1a1a2e]">
         {/* Small Grid Background */}
-        <ParallaxElement speed="slow" className="absolute inset-0">
+        <div className="absolute inset-0">
           <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="mobileGrid" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -469,20 +458,16 @@ function App() {
             </defs>
             <rect width="100%" height="100%" fill="url(#mobileGrid)" filter="url(#mobileGlow)"/>
           </svg>
-        </ParallaxElement>
+        </div>
         
         {/* Deep Blue/Purple Blur Orbs */}
-        <ParallaxElement speed="medium">
-          <div className="absolute top-1/3 right-[85%] w-64 h-64 bg-[#7c3aed]/25 rounded-full blur-3xl"></div>
-        </ParallaxElement>
-        <ParallaxElement speed="fast">
-          <div className="absolute bottom-1/3 left-[85%] w-64 h-64 bg-[#1e40af]/30 rounded-full blur-3xl"></div>
-        </ParallaxElement>
+        <div className="absolute top-1/3 right-[85%] w-64 h-64 bg-[#7c3aed]/25 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-[85%] w-64 h-64 bg-[#1e40af]/30 rounded-full blur-3xl"></div>
         
         <div className="max-w-6xl mx-auto">
-          <ScrollAnimation animation="fade-up" delay={100}>
+          <ScrollAnimation animation="fade-up" delay={25}>
             <div className="relative z-10 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-12 shadow-2xl bg-gradient-to-br from-[#1e3a8a]/20 via-[#7c3aed]/15 to-[#3730a3]/20">
-              <ScrollAnimation animation="fade-up" delay={200}>
+              <ScrollAnimation animation="fade-up" delay={50}>
                 <div className="text-center mb-8 md:mb-12">
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent px-4 text-glow-purple">
                     Social Media Content
@@ -492,10 +477,10 @@ function App() {
                   </p>
                 </div>
               </ScrollAnimation>
-              <ScrollAnimation animation="fade-up" delay={300}>
+              <ScrollAnimation animation="fade-up" delay={75}>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-6xl mx-auto">
                   {portraitVideos.map((video, index) => (
-                    <ScrollAnimation key={index} animation="scale-in" delay={50 * index}>
+                    <ScrollAnimation key={index} animation="scale-in" delay={12 * index}>
                       <VideoPlayer
                         src={video.src}
                         poster={video.poster}
@@ -514,7 +499,7 @@ function App() {
       {/* Contact Section */}
       <section id="contact" className="py-12 md:py-20 px-4 md:px-8 bg-gradient-to-br from-[#0a0a0f] via-[#0f1419] to-[#1a1a2e] relative overflow-hidden">
         {/* Small Grid Background */}
-        <ParallaxElement speed="slow" className="absolute inset-0">
+        <div className="absolute inset-0">
           <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="contactGrid" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -530,28 +515,24 @@ function App() {
             </defs>
             <rect width="100%" height="100%" fill="url(#contactGrid)" filter="url(#contactGlow)"/>
           </svg>
-        </ParallaxElement>
+        </div>
         
         {/* Deep Blue Blur Orbs */}
-        <ParallaxElement speed="medium">
-          <div className="absolute top-1/4 left-[80%] w-72 h-72 bg-[#1e40af]/30 rounded-full blur-3xl"></div>
-        </ParallaxElement>
-        <ParallaxElement speed="fast">
-          <div className="absolute bottom-1/4 right-[80%] w-80 h-80 bg-[#1e3a8a]/25 rounded-full blur-3xl"></div>
-        </ParallaxElement>
+        <div className="absolute top-1/4 left-[80%] w-72 h-72 bg-[#1e40af]/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-[80%] w-80 h-80 bg-[#1e3a8a]/25 rounded-full blur-3xl"></div>
         
         <div className="max-w-4xl mx-auto text-center">
-          <ScrollAnimation animation="scale-in" delay={100}>
+          <ScrollAnimation animation="scale-in" delay={25}>
             <div className="relative z-10 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl bg-gradient-to-br from-[#1e3a8a]/20 via-[#1e40af]/15 to-[#3730a3]/20">
-              <ScrollAnimation animation="fade-up" delay={200}>
+              <ScrollAnimation animation="fade-up" delay={50}>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-white px-4 text-glow-white">Let's Create Something Amazing</h2>
               </ScrollAnimation>
-              <ScrollAnimation animation="fade-up" delay={300}>
+              <ScrollAnimation animation="fade-up" delay={75}>
                 <p className="text-lg sm:text-xl text-gray-300 mb-6 md:mb-8 px-4 text-glow-gray">
                   Ready to bring your vision to life? Get in touch to discuss your next project.
                 </p>
               </ScrollAnimation>
-              <ScrollAnimation animation="scale-in" delay={400}>
+              <ScrollAnimation animation="scale-in" delay={100}>
                 <button className="btn-enhanced btn-cta-enhanced rounded-lg mx-4 text-glow">
                   Start a Project
                 </button>
@@ -575,7 +556,7 @@ function App() {
           </svg>
         </div>
         <div className="max-w-6xl mx-auto text-center text-gray-400">
-          <ScrollAnimation animation="fade-up" delay={100}>
+          <ScrollAnimation animation="fade-up" delay={25}>
             <p className="text-sm md:text-base text-glow-gray relative z-10">&copy; 2025 Aamir Naqvi Portfolio. All rights reserved.</p>
           </ScrollAnimation>
         </div>

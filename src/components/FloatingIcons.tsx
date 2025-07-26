@@ -68,7 +68,6 @@ const FloatingIcons: React.FC = () => {
               transform: `rotate(${rotation}deg) scale(${scale})`,
               filter: isMobile ? "blur(0.5px) drop-shadow(0 0 4px rgba(59, 130, 246, 0.2))" : "blur(1px) drop-shadow(0 0 8px rgba(59, 130, 246, 0.3))",
               animation: `floatY ${6 + Math.random() * 4}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 0}s`,
               willChange: "transform",
             }}
           />
