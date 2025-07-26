@@ -291,6 +291,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <FloatingNavbar /> 
+      <InteractiveCharacters />
       
       {/* Hero Section */}
    <section id="home" className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0a0a0f] via-[#0f1419] to-[#1a1a2e] text-white">
